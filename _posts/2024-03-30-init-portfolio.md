@@ -4,7 +4,7 @@ title: Init Portfolio
 date: 2024-03-30
 description:
 tags: 
-categories:
+categories: ["life"]
 chart:
   vega_lite: true
 ---
