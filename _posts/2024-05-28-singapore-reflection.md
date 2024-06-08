@@ -76,14 +76,14 @@ Hindsight really is 20/20.
 ### The First Day
 
 I was filled with nerves the first day of orientation. Our host school had planned a couple of days of activities for the
-entire exchange group. It felt like the first day of school and just like the first day of school, I arrived way too early.
-In fact, I was the first one in the room. I sat alone as the coordinators hurriedly finished final
-preparations for the orientation. Anxiety, nervousness, and excitement weren't foreign feelings to me but at that moment, they
-sure were acting like it. However, once people began trickling in and I had a few conversations here and there, all my nerves
-just ... went away. It's shocking how fast you can lose yourself when engrossed in social interaction. Admist the bustling 
-conversations, I can still remember saying to myself "these four months will go by in just a blink of an eye."
+entire exchange group. It felt oddly reminiscent of the first day of school, and true to its form, I found myself having arrived
+way too early. Sitting alone, I watched as the coordinators rushed to finish their final preparations for the orientation.
+Anxiety, nervousness, and excitement weren't foreign feelings to me, but at that moment, they sure were acting like it.
+However, as people began to trickle in and I had a few conversations here and there, all my nerves just ... went away.
+It's remarkable how fast you can lose yourself when engaged in social interaction. Admist the bustling 
+conversations, I distinctly recall thinking to myself, "these four months will go by in just a blink of an eye."
 
-It was suffice to say, that the next few days of activities was nothing short of memorable.
+It was suffice to say, that the next few days were nothing short of memorable.
 
 ### The Middle Part :smiley:
 
@@ -96,7 +96,7 @@ No, is it just me? Unrelatable analogy? Ok.
 Life in Singapore was like a box of chocolates. Each day was a new experience and you could never truly know what you would get.
 So far, it's been the only time in my life where I've lived impulsively. Spontaneously. If someone wanted to go to a random park,
 we would go. If I ran into someone and they wanted to have pancakes for "pancake day," we would do it. If people wanted to go to Bali,
-well ... you better get to booking those flights. There really was no dull moment. It didn't matter if it was night or day everyone was
+well ... you better get to booking those flights. There really was no dull moment. It didn't matter if it was night or day; everyone was
 there to try something new. We were all united under the common goal of "having fun." Looking back, this was probably one of the most
 memorable experiences of my exchange. The closeness of a small but tight community. It helped that our host school was smaller as well
 because eventually you would begin to start seeing some familar faces and get to know people on a closer level.
@@ -170,7 +170,7 @@ I recall in one of the conversations we had, a friend asked how I would have fel
 I simply answered that I probably would've still enjoyed the experience myself. However, after some thought, I realized how much I would've missed out on.
 Sure the exchange would've been memorable but part of the joy was being able to share the experiences with friends.
 
-I'm really fortunate to be able to leave this exchange having met so many amazing and wonderful people. Many of whom have
+I'm really fortunate to have been able to leave my exchange having met so many amazing and wonderful people. All of whom have
 made a lasting impact on my life. I really could not think of a better group of people I'd have rather spent the time with.
 Our late night conversations and hangouts did indeed hit different. I'll always think back to them as an escape from the busyness of everyday life.
 
@@ -186,7 +186,7 @@ I want to share...
 
 ### The Freedom To Travel
 Pretty self explantory. I know my experiences are not universal, so I feel extremely privileged and grateful to be given
-this opportunity. The world is so big. The things you could do are so vast. Travelling has really colored
+this opportunity. The world is so big. The things you can do are so vast. Travelling has really colored
 my black and white perspective of life and prescibed me new priorities in life. The feeling of being able to do whatever
 you want whenever you want really is freeing. I want to see more of the world.
 
@@ -224,11 +224,11 @@ Sometimes the things you feel are the most important in the moment become trivia
 If you find yourself doing things in haste and feeling the need to "catch up" to some fleeting sense of success.
 Just take a step back. Look up. Breathe in. Look around. Touch some grass. The world is vast.
 
-Stop chasing that moving goal post. There's no post to begin with. There's no need to be in a rush and when you realize
-that things take time you'll feel some much more relaxed. Aim for longer time horizons. Don't postpone yourself.
-Whether that's for work or for fun. Especially if it's for fun.
+Stop chasing that moving goal post. There's no post to begin with. There's no need to be in a rush, and when you realize
+that things take time you'll feel some much more relaxed. Aim for longer time horizons. Don't postpone yourself,
+whether it's for work or for fun, especially if it's for fun.
 
-I can't say that I won't break these principles again. I'm sure I will. As I've said previously, I'm struggling as is even after
+I can't say that I won't break these principles again; I'm sure I will. As I've said previously, I'm struggling as is, even after
 having learned this painful lesson multiple times. But I think the real value is recognizing it and making steps to move in the direction
 you think is right.
 
