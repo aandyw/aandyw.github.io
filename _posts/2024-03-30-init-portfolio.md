@@ -4,9 +4,7 @@ title: Init Portfolio
 date: 2024-03-30
 description:
 tags: 
-categories: ["life"]
-chart:
-  vega_lite: true
+categories: ["personal"]
 ---
 
 My first blog post! :)
