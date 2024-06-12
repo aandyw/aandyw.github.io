@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Transformer From Scratch
-description:
-img: assets/img/transformer.webp
+description: An implementation of the Transformer from "Attention Is All You Need"
+img: assets/img/transformers.webp
 importance: 2
 category: machine learning
 ---

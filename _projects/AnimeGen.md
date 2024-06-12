@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AnimeGen
-description: An attempt to generate industry-standard facial images for anime characters using Generative Adversarial Networks Resources
+description: An attempt to generate industry-standard facial images for anime characters using Generative Adversarial Networks
 img: assets/img/animegen.png
 importance: 1
 category: machine learning
