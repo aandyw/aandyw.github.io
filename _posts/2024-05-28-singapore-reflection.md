@@ -5,8 +5,6 @@ date: 2024-05-28
 description:
 tags: ["travel"]
 categories: ["personal"]
-toc:
-  beginning: left
 ---
 
 I had originally intended to write this entry while I was still abroad in Singapore. In fact, the previous
