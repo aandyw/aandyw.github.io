@@ -11,7 +11,7 @@ I had originally intended to write this entry while I was still abroad in Singap
 draft is right in front of me as I'm revising everything.
 
 Things have happened so fast one after another and before I knew it, I was already back in Canada.
-I guess that's alright but it seems to be a reoccuring theme. My 4 months studying abroad went by in 
+I guess that's alright but it seems to be a reoccuring theme. My 4 months studying abroad went by in
 the blink of an eye and the only feelings I'm left with are the lingering feelings of wanting to go back.
 To do more. To cherish again the camaraderie of exploring a foreign country with a close group of friends.
 
@@ -26,7 +26,6 @@ time to reflect. As the Dr. Seuss quote goes
 
 Let's have a good yap and I'll do my best to keep it short & sweet.
 
-
 <div class="row justify-content-center">
     <div class="col-md-6">
         {% include figure.liquid loading="eager" path="assets/img/blog/singapore/sutd.jpeg" class="img-fluid rounded z-depth-1" %}
@@ -39,10 +38,10 @@ Let's have a good yap and I'll do my best to keep it short & sweet.
     A few photos from Singapore.
 </div>
 
-
 # Exchange In Singapore
 
 ### Leaving Home
+
 I can still vividly recall the day I first received my acceptable letter to study abroad in Singapore. That was truly of the
 only day's I can remember when I physically shot up into the air and screamed with joy. It might've been an overreaction
 but it was certainly a dream come true.
@@ -60,7 +59,7 @@ to have been able to travel around Japan both solo and with friends for the firs
 I can't lie. The first time I arrived in Singapore, it was both breathtaking and overwhelming. **Changi Aiport** truly was a jem but
 I was also plagued by countless worries about how the next 4 months would go. Like starting the first day of high school again, I wondered
 what I would do if I didn't like it here. I had also began to worry about my other committments as I student that I had brought along from
-back home. Yes, travel was fun, but how could I *TRULY* relax and enjoy my time when there was still work to be done? It helped that I had
+back home. Yes, travel was fun, but how could I _TRULY_ relax and enjoy my time when there was still work to be done? It helped that I had
 a mutual friend at the time in Singapore who was gracious enough to help me with getting settled down. If not for him, I certainly would've
 spent the first few days in Singapore completely in the dumps. Thank you dear friend. The eel was delicious.
 
@@ -78,7 +77,7 @@ entire exchange group. It felt oddly reminiscent of the first day of school, and
 way too early. Sitting alone, I watched as the coordinators rushed to finish their final preparations for the orientation.
 Anxiety, nervousness, and excitement weren't foreign feelings to me, but at that moment, they sure were acting like it.
 However, as people began to trickle in and I had a few conversations here and there, all my nerves just ... went away.
-It's remarkable how fast you can lose yourself when engaged in social interaction. Admist the bustling 
+It's remarkable how fast you can lose yourself when engaged in social interaction. Admist the bustling
 conversations, I distinctly recall thinking to myself, "these four months will go by in just a blink of an eye."
 
 It was suffice to say, that the next few days were nothing short of memorable.
@@ -100,7 +99,8 @@ memorable experiences of my exchange. The closeness of a small but tight communi
 because eventually you would begin to start seeing some familar faces and get to know people on a closer level.
 
 #### Memories
-*A quick list of some of the memorable things that happened during my exchange*
+
+_A quick list of some of the memorable things that happened during my exchange_
 
 - Developing a crippling addiction to chicken rice
 
@@ -161,7 +161,8 @@ I'm sure I'm missing a lot more things. But just thinking about it is already ma
 </div>
 
 ### What the .. what do you mean it's the end. :angry:
-*Maybe The Real Treasure Was the Friends We Made Along the Way*
+
+_Maybe The Real Treasure Was the Friends We Made Along the Way_
 
 Like all good things. It must come to an end. The more I think about it the more grateful I feel towards the friends that I made along the way.
 I recall in one of the conversations we had, a friend asked how I would have felt if I was in Singapore alone or with people I couldn't get along with.
@@ -175,31 +176,32 @@ Our late night conversations and hangouts did indeed hit different. I'll always 
 With that said, it wasn't a surprise that a great sadness came over me when the final weeks of our exchange approached. As the day of my flight crept closer
 my bittersweet feelings grew stronger. I prayed that things could stay like this forever.
 
-
 # Things I Learned I Love
-*(even if you're heart is two sizes too small)*
+
+_(even if you're heart is two sizes too small)_
 
 Over the period of 4 months I can say without a doubt that I learned a million things about myself. Here are just a few
 I want to share...
 
 ### The Freedom To Travel
+
 Pretty self explantory. I know my experiences are not universal, so I feel extremely privileged and grateful to be given
 this opportunity. The world is so big. The things you can do are so vast. Travelling has really colored
 my black and white perspective of life and prescibed me new priorities in life. The feeling of being able to do whatever
 you want whenever you want really is freeing. I want to see more of the world.
 
 ### Community
+
 Being able to hangout with friends whenever is a great feeling. Whether that's when travelling or studying, the feeling
 of community and knowing that there are people who have your back is second to none.
 
 ### Soulsearching
+
 A bit too :cheese:.
 
 Not something I love per se but I enjoy distancing myself from the monotony of life back home and doing something new.
 Something that can help me discover new things about myself. I think the change of pace came at a much needed moment
 in my life and definitely gave me the fuel and drive to push onward. But now in a fuel efficient way.
-
-
 
 # The Most Important Lesson
 
@@ -232,11 +234,11 @@ you think is right.
 
 ---
 
-I hope no one reads this but if you do, thank you for listening to me yap. Perhaps you think it's silly. Or maybe you quite enjoyed it. 
+I hope no one reads this but if you do, thank you for listening to me yap. Perhaps you think it's silly. Or maybe you quite enjoyed it.
 Regardless I appreciate your time.
 
-
 # My Honest Reaction
+
 A friend of mine showed me this meme by [@tentenchan2525](https://twitter.com/tentenchan2525) on twitter. I think it really captures the essence of my 2024.
 
 <div class="row justify-content-center">

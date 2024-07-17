@@ -20,4 +20,3 @@ The project can be found on the github repo [AnimeGen](https://github.com/aandyw
 <div class="caption">
     Example generations using the Self-Attention Generative Adversarial Network (SAGAN) implementation.
 </div>
-
