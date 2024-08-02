@@ -3,7 +3,7 @@ layout: page
 title: Stuff From Scratch
 description: The birthplace of some really dubious AI/ML implementations
 img: assets/img/jackie_chan.png
-importance: 3
+importance: 1
 category: machine learning
 ---
 
