@@ -19,7 +19,7 @@ There are many things I still have yet to work on that I want to work on. But th
 
 To me, taking action means just doing something. A walk is better than no run. A step is better than no walk. Showing up is what counts. There will be ups and downs no matter what path you choose to walk. It's understanding that you don't always have to be running to improve. Happiness can come from just taking the next step.
 
-Even still, action itself is balancing act between **complacency** and **perfectionism** after having picked a **priority**. It's not easy to *just* start and these are usually the reasons why.
+Even still, action itself is a balancing act between **complacency** and **perfectionism** after having picked a **priority**. It's not easy to *just* start and these are usually my reasons why.
 
 ### Complacency
 
@@ -28,7 +28,7 @@ There's no point in taking meaningless action. You should to things with intent 
 
 ### Perfectionism
 
-You shouldn't let yourself be caught up in a web of perfectionist thoughts. Most of the time, when you're starting out, things will never be perfect. It's impossible to envision the perfect answer before starting. Don't be paralyzed by perfection. Just shoot. Even if it might be your foot. At least you know if was wrong?
+You shouldn't let yourself be caught up in a web of perfectionist thoughts. Most of the time, when you're starting out, things will never be perfect. It's impossible to envision the perfect answer before starting. Don't be paralyzed by perfection. Just shoot. Even if it might be your foot. At least you know it was wrong?
 
 The first step is always the hardest.
 
