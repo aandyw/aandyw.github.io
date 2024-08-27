@@ -19,12 +19,11 @@ There are many things I still have yet to work on that I want to work on. But th
 
 To me, taking action means just doing something. A walk is better than no run. A step is better than no walk. Showing up is what counts. There will be ups and downs no matter what path you choose to walk. It's understanding that you don't always have to be running to improve. Happiness can come from just taking the next step.
 
-Even still, action itself is a balancing act between **complacency** and **perfectionism** after having first picked a **priority**. It's not easy to *just* start and these are usually my reasons why.
+Even still, action itself is a balancing act between **complacency** and **perfectionism** after having first picked a **priority**. It's not easy to _just_ start and these are usually my reasons why.
 
 ### Complacency
 
 There's no point in taking meaningless action. You should to things with intent and know thy goal for the corresponding action. Why are you doing this?
-
 
 ### Perfectionism
 
@@ -34,11 +33,12 @@ The first step is always the hardest.
 
 ### Priority
 
-*It can be difficult to take action too when there are so many things you could do.*
+_It can be difficult to take action too when there are so many things you could do._
 
 How do you choose? Everything is so tempting and your eyes are often times bigger than your metaphorical stomach.
 
 Tim Ferris has a couple of good questions that I think really helped:
+
 1. What project / task, if done now, would make everything easier or unnecessary?
 2. What project / task, if done, would make you the proudest?
 3. What project / task, if done, even if it failed, would lead to the most successful outcomes (e.g. new skills, relationships, etc.)?
