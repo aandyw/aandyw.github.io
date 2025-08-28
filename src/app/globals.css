@@ -17,6 +17,73 @@
   html.changing-theme * {
     transition: none !important;
   }
+
+  /* Force bullet points to be visible - override any conflicting styles */
+  ul {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+  }
+  
+  ol {
+    list-style-type: decimal !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+  }
+  
+  li {
+    display: list-item !important;
+  }
+  
+  /* Override any potential Tailwind or other CSS framework list resets */
+  ul[class], ol[class] {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+  }
+  
+  ol[class] {
+    list-style-type: decimal !important;
+  }
+  
+  /* Ensure list items are properly displayed */
+  li[class] {
+    display: list-item !important;
+  }
+  
+  /* Specific styling for MDX content */
+  .prose ul, .prose ol {
+    margin-bottom: 1.5rem;
+    list-style-position: outside;
+    padding-left: 2rem;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  /* Ensure bullet points are visible */
+  .prose ul li::marker {
+    color: #212529;
+    font-weight: 400;
+  }
+  
+  .prose ol li::marker {
+    color: #212529;
+    font-weight: 400;
+  }
+  
+  /* Fallback for browsers that don't support ::marker */
+  .prose ul {
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+  
+  .prose ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+  }
 }
 
 /* Light mode (default) */

@@ -8,7 +8,6 @@ const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-
   return (
     <article className="max-w-3xl mx-auto px-6 py-12">
       <div className="mb-8 text-center">
@@ -17,7 +16,7 @@ const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
           {new Date(post.date).toLocaleDateString()}
         </time>
         <p className="text-sm text-muted-foreground mt-2">{post.readingTime}</p>
-        
+
         {/* Tags */}
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 justify-center mt-4">

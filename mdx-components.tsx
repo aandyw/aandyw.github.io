@@ -1,12 +1,10 @@
-import type { MDXComponents } from 'mdx/types'
-import Link from 'next/link'
+import type { MDXComponents } from "mdx/types";
+import Link from "next/link";
 
 // Define all components in one place
 const allComponents = {
   h1: ({ children }: any) => (
-    <h1 className="text-4xl font-bold text-foreground mb-6">
-      {children}
-    </h1>
+    <h1 className="text-4xl font-bold text-foreground mb-6">{children}</h1>
   ),
   h2: ({ children }: any) => (
     <h2 className="text-3xl font-semibold text-foreground mb-4 mt-8">
@@ -24,22 +22,16 @@ const allComponents = {
     </h4>
   ),
   p: ({ children }: any) => (
-    <p className="text-foreground mb-4 leading-7">
-      {children}
-    </p>
+    <p className="text-foreground mb-4 leading-7">{children}</p>
   ),
   ul: ({ children }: any) => (
-    <ul className="list-disc list-inside text-foreground mb-4 space-y-2">
-      {children}
-    </ul>
+    <ul className="list-disc text-black mb-6 space-y-3 pl-8">{children}</ul>
   ),
   ol: ({ children }: any) => (
-    <ol className="list-decimal list-inside text-foreground mb-4 space-y-2">
-      {children}
-    </ol>
+    <ol className="list-decimal text-black mb-6 space-y-3 pl-8">{children}</ol>
   ),
   li: ({ children }: any) => (
-    <li className="leading-7">{children}</li>
+    <li className="leading-relaxed text-base text-black">{children}</li>
   ),
   blockquote: ({ children }: any) => (
     <blockquote className="border-l-4 border-accent-purple pl-4 py-2 my-4 bg-card text-foreground italic rounded-r">
@@ -60,8 +52,8 @@ const allComponents = {
     <a
       href={href}
       className="text-accent-purple hover:text-accent-purple-hover transition-colors"
-      target={href?.startsWith('http') ? '_blank' : undefined}
-      rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+      target={href?.startsWith("http") ? "_blank" : undefined}
+      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
     >
       {children}
     </a>
@@ -75,10 +67,15 @@ const allComponents = {
         </div>
       )}
       <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
-      {description && <p className="text-muted-foreground mb-3">{description}</p>}
+      {description && (
+        <p className="text-muted-foreground mb-3">{description}</p>
+      )}
       {children}
       {url && (
-        <Link href={url} className="text-accent-purple hover:text-accent-purple-hover transition-colors font-medium text-sm">
+        <Link
+          href={url}
+          className="text-accent-purple hover:text-accent-purple-hover transition-colors font-medium text-sm"
+        >
           View Project →
         </Link>
       )}
@@ -86,10 +83,10 @@ const allComponents = {
   ),
   TechStack: ({ children }: any) => (
     <div className="bg-card border border-border-color rounded-lg p-4 mb-6">
-      <h4 className="text-lg font-semibold text-foreground mb-3">Technologies Used</h4>
-      <div className="flex flex-wrap gap-2">
-        {children}
-      </div>
+      <h4 className="text-lg font-semibold text-foreground mb-3">
+        Technologies Used
+      </h4>
+      <div className="flex flex-wrap gap-2">{children}</div>
     </div>
   ),
   TechTag: ({ children }: any) => (
@@ -99,10 +96,10 @@ const allComponents = {
   ),
   FeatureList: ({ children }: any) => (
     <div className="bg-card border border-border-color rounded-lg p-4 mb-6">
-      <h4 className="text-lg font-semibold text-foreground mb-3">Key Features</h4>
-      <ul className="space-y-2">
-        {children}
-      </ul>
+      <h4 className="text-lg font-semibold text-foreground mb-3">
+        Key Features
+      </h4>
+      <ul className="space-y-2">{children}</ul>
     </div>
   ),
   CodeBlock: ({ language, children }: any) => (
@@ -118,15 +115,21 @@ const allComponents = {
     </div>
   ),
   ImageGrid: ({ children }: any) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-      {children}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">{children}</div>
+  ),
+  ImageGridWithCaption: ({ children, caption }: any) => (
+    <div className="space-y-3 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{children}</div>
+      {caption && (
+        <p className="text-sm text-gray-600 text-center italic">{caption}</p>
+      )}
     </div>
   ),
   ImageWithCaption: ({ src, alt, caption }: any) => (
-    <div className="space-y-2">
-      <img src={src} alt={alt} className="w-full rounded-lg" />
+    <div className="space-y-3">
+      <img src={src} alt={alt} className="w-full rounded shadow-sm" />
       {caption && (
-        <p className="text-sm text-muted-foreground text-center italic">{caption}</p>
+        <p className="text-sm text-gray-600 text-center italic">{caption}</p>
       )}
     </div>
   ),
@@ -137,7 +140,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...allComponents,
     ...components,
-  }
+  };
 }
 
 // Export directly for MDXRemote (Next.js app)
