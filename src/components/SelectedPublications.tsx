@@ -1,5 +1,5 @@
-import { Button } from "./ui/button";
-import { getSelectedPublications } from "../src/lib/publications";
+import { Button } from "@/components/ui/button";
+import { getSelectedPublications } from "@/lib/publications";
 
 const Publications = () => {
   const publications = getSelectedPublications();

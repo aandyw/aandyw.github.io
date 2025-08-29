@@ -1,8 +1,8 @@
-import { getProjectBySlug, getProjectSlugs } from "../../../lib/projects";
-import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { getAllProjects, getProjectBySlug, getProjectSlugs } from '@/lib/projects';
+import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from "next/link";
-import { mdxComponents } from "../../../../mdx-components";
+import { mdxComponents } from "@/components/mdx-components";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;

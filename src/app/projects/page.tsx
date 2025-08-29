@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllProjects, getProjectCategories } from "../../lib/projects";
+import { getAllProjects, getProjectCategories } from "@/lib/projects";
 
 export default function ProjectsPage() {
   const projects = getAllProjects();

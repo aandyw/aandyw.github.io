@@ -1,7 +1,7 @@
-import { getPostBySlug, getPostSlugs } from "../../../lib/posts";
+import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { mdxComponents } from "../../../../mdx-components";
+import { mdxComponents } from "@/components/mdx-components";
 
 const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;

@@ -1,5 +1,5 @@
-import { getAllPublications } from '../../lib/publications';
-import { Button } from '../../../components/ui/button';
+import { getAllPublications } from '@/lib/publications';
+import { Button } from '@/components/ui/button';
 
 export default function PublicationsPage() {
   const publications = getAllPublications();

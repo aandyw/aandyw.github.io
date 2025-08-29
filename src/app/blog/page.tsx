@@ -1,5 +1,5 @@
-import { getAllPosts } from '../../lib/posts';
-import { formatReadableDate } from '../../lib/utils';
+import { getAllPosts } from '@/lib/posts';
+import { formatReadableDate } from '@/lib/utils';
 
 const Blog = () => {
   const blogPosts = getAllPosts();

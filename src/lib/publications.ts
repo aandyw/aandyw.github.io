@@ -1,8 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
-const publicationsDirectory = path.join(process.cwd(), 'publications')
+import { getAllContent, getContentBySlug, getContentSlugs } from './content';
 
 export interface Publication {
   slug: string
@@ -17,32 +13,7 @@ export interface Publication {
 }
 
 export function getAllPublications(): Publication[] {
-  if (!fs.existsSync(publicationsDirectory)) {
-    return []
-  }
-
-  const fileNames = fs.readdirSync(publicationsDirectory)
-  const allPublicationsData = fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
-    .map((fileName) => {
-      const slug = fileName.replace(/\.mdx$/, '')
-      const fullPath = path.join(publicationsDirectory, fileName)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data } = matter(fileContents)
-
-      return {
-        slug,
-        ...data,
-      } as Publication
-    })
-
-  return allPublicationsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  return getAllContent('publications') as any as Publication[];
 }
 
 export function getSelectedPublications(): Publication[] {
@@ -51,27 +22,9 @@ export function getSelectedPublications(): Publication[] {
 }
 
 export function getPublicationBySlug(slug: string): Publication | null {
-  try {
-    const fullPath = path.join(publicationsDirectory, `${slug}.mdx`)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data } = matter(fileContents)
-
-    return {
-      slug,
-      ...data,
-    } as Publication
-  } catch (error) {
-    return null
-  }
+  return getContentBySlug('publications', slug) as Publication | null;
 }
 
 export function getPublicationSlugs(): string[] {
-  if (!fs.existsSync(publicationsDirectory)) {
-    return []
-  }
-
-  const fileNames = fs.readdirSync(publicationsDirectory)
-  return fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
-    .map((fileName) => fileName.replace(/\.mdx$/, ''))
+  return getContentSlugs('publications');
 }

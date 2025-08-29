@@ -1,8 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
-const projectsDirectory = path.join(process.cwd(), 'projects')
+import { getAllContent, getContentBySlug, getContentSlugs } from './content';
 
 export interface Project {
   slug: string
@@ -19,33 +15,7 @@ export interface Project {
 }
 
 export function getAllProjects(): Project[] {
-  if (!fs.existsSync(projectsDirectory)) {
-    return []
-  }
-
-  const fileNames = fs.readdirSync(projectsDirectory)
-  const allProjectsData = fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
-    .map((fileName) => {
-      const slug = fileName.replace(/\.mdx$/, '')
-      const fullPath = path.join(projectsDirectory, fileName)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data, content } = matter(fileContents)
-
-      return {
-        slug,
-        content,
-        ...data,
-      } as Project
-    })
-
-  return allProjectsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  return getAllContent('projects') as any as Project[];
 }
 
 export function getFeaturedProjects(): Project[] {
@@ -59,30 +29,11 @@ export function getProjectsByCategory(category: string): Project[] {
 }
 
 export function getProjectBySlug(slug: string): Project | null {
-  try {
-    const fullPath = path.join(projectsDirectory, `${slug}.mdx`)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data, content } = matter(fileContents)
-
-    return {
-      slug,
-      content,
-      ...data,
-    } as Project
-  } catch (error) {
-    return null
-  }
+  return getContentBySlug('projects', slug) as Project | null;
 }
 
 export function getProjectSlugs(): string[] {
-  if (!fs.existsSync(projectsDirectory)) {
-    return []
-  }
-
-  const fileNames = fs.readdirSync(projectsDirectory)
-  return fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
-    .map((fileName) => fileName.replace(/\.mdx$/, ''))
+  return getContentSlugs('projects');
 }
 
 export function getProjectCategories(): string[] {

@@ -1,6 +1,6 @@
-import HeroSection from "../../components/HeroSection";
-import LatestPosts from "../../components/LatestPosts";
-import Publications from "../../components/SelectedPublications";
+import HeroSection from "@/components/HeroSection";
+import LatestPosts from "@/components/LatestPosts";
+import Publications from "@/components/SelectedPublications";
 
 const Index = () => {
   return (

@@ -1,4 +1,4 @@
-import { getAllPosts } from '../src/lib/posts';
+import { getAllPosts } from '@/lib/posts';
 
 const LatestPosts = () => {
   const allPosts = getAllPosts();

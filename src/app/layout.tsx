@@ -1,5 +1,5 @@
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
