@@ -39,34 +39,33 @@ $$
 \text{Loss} = -\sum^K_{i=1}y_{i} \log(p_{i}) \quad\text{where $K$ is the number of classes}
 $$
 
-- **Stochastic Gradient Descent (SGD) optimizer** with momentum of $$0.9$$, weight decay of $$0.0005$$, and learning rate of $$0.01$$.
+- **Stochastic Gradient Descent (SGD) optimizer** with momentum of $0.9$, weight decay of $0.0005$, and learning rate of $0.01$.
 
 Implementations in original paper that we do not use:
 
-- Training with $$90$$ epochs and a batch size of $$128$$.
+- Training with $90$ epochs and a batch size of $128$.
 - A key innovation was parallelizing the training across 2 GPUs for 5-6 days which we do not need.
 
 Instead we do:
 
-- Training with ~$$30$$ epochs and a batch size of $$128$$.
+- Training with ~$30$ epochs and a batch size of $128$.
 - Training on a single GPU (colab T4 GPU is sufficient)
 
-<ImageWithCaption src="/assets/img/blog/alexnet/alexnet.png" alt="AlexNet Architecture" caption="AlexNet Architecture. Credit to [Pinecone](https://www.pinecone.io/learn/series/image-search/imagenet/)." />
+<ImageWithCaption src="/assets/img/blog/alexnet/alexnet.png" alt="AlexNet Architecture" caption="AlexNet Architecture. Image credit to Pinecone." />
 
 ## Results
 
-The final results after training for ~$$30$$ epochs are as follows:  
+The final results after training for ~$30$ epochs are as follows:  
 `Test Top-1 accuracy: 31.754350662231445 % | Top-5 accuracy: 58.7618670886076 %`
 
 <ImageWithCaption
   src="/assets/img/blog/alexnet/alexnet_metrics.png"
   alt="AlexNet Training Metrics"
-  caption="Training metrics (accuracy and loss) for AlexNet on Tiny ImageNet"
 />
 
-Considering that the paper reports top-1 and top-5 error rate scores of $$67.4\%$$ and $$40.9\%$$ on ImageNet, we can say that the implementation is sufficiently accurate for the Tiny ImageNet dataset.
+Considering that the paper reports top-1 and top-5 error rate scores of $67.4\%$ and $40.9\%$ on ImageNet, we can say that the implementation is sufficiently accurate for the Tiny ImageNet dataset.
 
-_Top-1 and top-5 accuracies are inversely equivalent being $$32.6\%$$ and $$59.1\%$$ respectively._
+_Top-1 and top-5 accuracies are inversely equivalent being $32.6\%$ and $59.1\%$ respectively._
 
 <br/>
 
@@ -100,4 +99,4 @@ It goes without saying that hyperparameter tuning is a crucial part of training 
 conventional knowledge of higher batch sizes = higher memory usage, too large a batch size can also cause overfitting.
 Too small and training is inefficient.
 
-A balance is needed and in our case, $$128$$ worked out.
+A balance is needed and in our case, $128$ worked out.

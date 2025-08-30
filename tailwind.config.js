@@ -6,13 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
       colors: {
-        'accent-purple': {
-          DEFAULT: '#a855f7',
-          hover: '#9333ea'
+        "accent-purple": {
+          DEFAULT: "#a855f7",
+          hover: "#9333ea",
         },
       },
     },
   },
   plugins: [],
-}
+};

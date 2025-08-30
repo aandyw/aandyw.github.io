@@ -17,7 +17,12 @@ export default function RootLayout({
         <title>Andy Wu</title>
       </head>
       <body className="bg-background text-foreground transition-colors duration-300">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
           <Navigation />
           <main className="transition-colors duration-300">{children}</main>
           <Footer />

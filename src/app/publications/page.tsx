@@ -1,5 +1,5 @@
-import { getAllPublications } from "@/lib/publications";
 import { Button } from "@/components/ui/button";
+import { getAllPublications } from "@/lib/publications";
 
 export default function PublicationsPage() {
   const publications = getAllPublications();
@@ -16,8 +16,8 @@ export default function PublicationsPage() {
       </header>
 
       <div className="space-y-12">
-        {publications.map((pub, index) => (
-          <article key={index} className="group relative">
+        {publications.map((pub, _index) => (
+          <article key={pub.slug} className="group relative">
             <div className="space-y-3 pr-20">
               {/* Title */}
               <h2 className="text-lg font-light text-foreground leading-relaxed">
@@ -26,8 +26,8 @@ export default function PublicationsPage() {
 
               {/* Authors */}
               <p className="text-muted-foreground text-sm">
-                {pub.authors.map((author, authorIndex) => (
-                  <span key={authorIndex}>
+                {pub.authors.map((author, _authorIndex) => (
+                  <span key={author}>
                     {author === "Andy Wu" ? (
                       <span className="underline decoration-accent-purple">
                         {author}
@@ -35,7 +35,7 @@ export default function PublicationsPage() {
                     ) : (
                       author
                     )}
-                    {authorIndex < pub.authors.length - 1 ? ", " : ""}
+                    {_authorIndex < pub.authors.length - 1 ? ", " : ""}
                   </span>
                 ))}
               </p>

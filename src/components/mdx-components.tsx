@@ -3,16 +3,27 @@ import type { MDXComponents } from "mdx/types";
 // Define all components in one place
 const allComponents = {
   h1: ({ children }: any) => (
-    <h1 className="text-4xl text-foreground mb-6 mt-8">{children}</h1>
+    <h1 className="font-light text-[40px] leading-[48px] text-foreground mb-6 mt-8">
+      {children}
+    </h1>
   ),
   h2: ({ children }: any) => (
-    <h2 className="text-3xl text-foreground mb-4 mt-8">{children}</h2>
+    <h2 className="font-light text-[32px] leading-[38px] text-foreground mb-4 mt-8">
+      {children}
+    </h2>
   ),
   h3: ({ children }: any) => (
-    <h3 className="text-2xl text-foreground mb-3 mt-6">{children}</h3>
+    <h3 className="font-light text-[28px] leading-[34px] text-foreground mb-3 mt-6">
+      {children}
+    </h3>
   ),
   h4: ({ children }: any) => (
-    <h4 className="text-xl text-foreground mb-3 mt-4">{children}</h4>
+    <h4 className="font-light text-[24px] leading-[29px] text-foreground mb-3 mt-4">
+      {children}
+    </h4>
+  ),
+  strong: ({ children }: any) => (
+    <strong className="font-semibold">{children}</strong>
   ),
   p: ({ children }: any) => <p className="text-foreground mb-4">{children}</p>,
   ul: ({ children }: any) => (
