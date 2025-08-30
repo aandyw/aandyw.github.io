@@ -1,8 +1,29 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
+import React from "react"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+}
+
+/**
+ * Render a markdown title with basic markdown support
+ * Supports: **bold**, *italic*, ~~strikethrough~~
+ */
+export function renderMarkdownTitle(title: string): React.ReactElement {
+  // Simple markdown parsing for titles
+  let processedTitle = title
+  
+  // Handle strikethrough ~~text~~
+  processedTitle = processedTitle.replace(/~~(.*?)~~/g, '<del>$1</del>')
+  
+  // Handle bold **text**
+  processedTitle = processedTitle.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  
+  // Handle italic *text*
+  processedTitle = processedTitle.replace(/\*(.*?)\*/g, '<em>$1</em>')
+  
+  return React.createElement('span', { dangerouslySetInnerHTML: { __html: processedTitle } })
 }
 
 /**

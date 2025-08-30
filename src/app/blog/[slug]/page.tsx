@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import remarkGemoji from "remark-gemoji";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
-import { formatReadableDate } from "@/lib/utils";
+import { formatReadableDate, renderMarkdownTitle } from "@/lib/utils";
 
 const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
@@ -16,7 +16,7 @@ const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <article className="max-w-3xl mx-auto px-6 py-6">
       <div className="mb-8 text-center">
-        <h1 className="text-4xl mb-2">{post.title}</h1>
+        <h1 className="text-4xl mb-2">{renderMarkdownTitle(post.title)}</h1>
         <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
           <time dateTime={post.date}>{formatReadableDate(post.date)}</time>
           <span>•</span>

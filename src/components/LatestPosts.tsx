@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/posts";
-import { formatReadableDate } from "@/lib/utils";
+import { formatReadableDate, renderMarkdownTitle } from "@/lib/utils";
 
 const LatestPosts = () => {
   const allPosts = getAllPosts();
@@ -21,7 +21,7 @@ const LatestPosts = () => {
               href={`/blog/${post.slug}`}
               className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors font-light"
             >
-              {post.title}
+              {renderMarkdownTitle(post.title)}
             </a>
           </div>
         ))}

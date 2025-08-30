@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/posts";
-import { formatReadableDate } from "@/lib/utils";
+import { formatReadableDate, renderMarkdownTitle } from "@/lib/utils";
 import { Tag } from "@/components/Tag";
 import {
   Card,
@@ -28,7 +28,9 @@ const Blog = () => {
               <Card className="w-full transition-all duration-200 hover:border-accent-purple group-hover:shadow-md border-border-color">
                 <CardHeader className="pb-2">
                   {/* Title */}
-                  <h1 className="text-2xl">{post.title}</h1>
+                  <h1 className="text-2xl">
+                    {renderMarkdownTitle(post.title)}
+                  </h1>
 
                   {/* Date and Read Time */}
                   <div className="flex items-center gap-3 text-sm text-muted-foreground">
