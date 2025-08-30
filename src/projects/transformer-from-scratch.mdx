@@ -2,77 +2,14 @@
 title: "Transformer From Scratch"
 description: "An implementation of the Transformer from \"Attention Is All You Need\""
 image: "/assets/img/transformers.webp"
-category: "machine learning"
 date: "2024-02-01"
 tags: ["Transformer", "Attention", "PyTorch", "NLP"]
 url: "https://github.com/aandyw/transformer-from-scratch"
 featured: true
 ---
 
-An implementation of the Transformer architecture from the seminal paper "Attention Is All You Need". This project provides a complete, educational implementation of the Transformer model for sequence-to-sequence tasks.
+TransformerFromScratch is supposed to be an educational project to learn more about the mechanisms that make Transformers
+the modern day success that is. The github repo contains my implementation after navigating various resources that have
+already covered this topic in depth. The code takes inspiration from many of these different sources.
 
-## Overview
-
-The Transformer model revolutionized natural language processing by introducing the attention mechanism as the core building block, eliminating the need for recurrent connections.
-
-<FeatureList>
-- Complete Transformer encoder-decoder architecture
-- Multi-head self-attention mechanism
-- Positional encoding
-- Layer normalization and residual connections
-- Training and inference scripts
-</FeatureList>
-
-## Architecture
-
-### Encoder
-The encoder consists of 6 identical layers, each containing:
-- **Multi-head self-attention**: Allows the model to focus on different parts of the input sequence
-- **Position-wise feed-forward network**: Processes each position independently
-- **Layer normalization and residual connections**: Stabilizes training
-
-### Decoder
-The decoder also has 6 layers with:
-- **Self-attention**: Attends to previous decoder outputs
-- **Encoder-decoder attention**: Connects decoder to encoder
-- **Feed-forward networks**: Same as encoder
-
-<CodeBlock language="python">
-class Transformer(nn.Module):
-    def __init__(self, src_vocab_size, tgt_vocab_size, d_model=512, 
-                 n_heads=8, n_layers=6, d_ff=2048, max_seq_len=5000):
-        super().__init__()
-        self.encoder = Encoder(src_vocab_size, d_model, n_heads, n_layers, d_ff, max_seq_len)
-        self.decoder = Decoder(tgt_vocab_size, d_model, n_heads, n_layers, d_ff, max_seq_len)
-        self.src_embedding = nn.Embedding(src_vocab_size, d_model)
-        self.tgt_embedding = nn.Embedding(tgt_vocab_size, d_model)
-        self.positional_encoding = PositionalEncoding(d_model, max_seq_len)
-</CodeBlock>
-
-## Key Features
-
-<ProjectCard title="Multi-Head Attention" description="Scaled dot-product attention with multiple heads for parallel processing">
-The attention mechanism allows the model to focus on relevant parts of the input sequence when generating each output token.
-</ProjectCard>
-
-<ProjectCard title="Positional Encoding" description="Sinusoidal positional encodings to give the model sequence order information">
-Since the Transformer has no recurrence, positional information must be explicitly added to the input embeddings.
-</ProjectCard>
-
-## Technologies Used
-
-<TechStack>
-  <TechTag>PyTorch</TechTag>
-  <TechTag>Python</TechTag>
-  <TechTag>NumPy</TechTag>
-  <TechTag>Transformers library for comparison</TechTag>
-</TechStack>
-
-## Results
-
-The implementation achieves competitive performance on machine translation tasks and serves as an excellent educational resource for understanding attention mechanisms.
-
-<ImageGrid>
-  <ImageWithCaption src="/assets/transformer-architecture.png" alt="Transformer Architecture" caption="Complete Transformer architecture diagram" />
-  <ImageWithCaption src="/assets/attention-weights.png" alt="Attention Weights" caption="Visualization of attention weights" />
-</ImageGrid>
+The project can be found on the github repo [TransformerFromScratch](https://github.com/aandyw/TransformerFromScratch).

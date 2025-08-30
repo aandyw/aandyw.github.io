@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -10,108 +11,119 @@ import {
 const HeroSection = () => {
   return (
     <section className="max-w-3xl mx-auto px-6 pt-12 pb-6">
-      <div className="flex flex-col lg:flex-row items-start gap-12">
-        <div className="flex-1">
-          <h1 className="text-4xl mb-4 text-foreground">
-            <span className="font-bold">Andy</span>{" "}
-            <span className="font-light">Wu</span>
-          </h1>
+      {/* Header Section */}
+      <header className="mb-4">
+        <h1 className="text-4xl mb-2 text-foreground">
+          <span className="font-extrabold">Andy</span> Wu
+        </h1>
+        <p>Trying to build new things ツ</p>
+      </header>
 
-          <div className="space-y-4 text-foreground font-light leading-relaxed text-sm">
-            <p>Trying to build new things ツ</p>
-            <p>
-              Hi there! I'm a final year student studying Mathematics and
-              Computer Science at the{" "}
-              <a
-                href="https://uwaterloo.ca"
-                className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors"
-              >
-                University of Waterloo
-              </a>
-              .
-            </p>
+      {/* Profile Section */}
+      <div className="float-right ml-6">
+        <figure>
+          <Image
+            src="/assets/img/profile-image.jpg"
+            alt="Profile image"
+            className="w-56 h-56 object-cover rounded-sm shadow-lg"
+            width={224}
+            height={224}
+          />
+        </figure>
 
-            <p>
-              This portfolio was created to both showcase my ongoing{" "}
-              <a
-                href="/projects"
-                className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors"
-              >
-                projects
-              </a>{" "}
-              and{" "}
-              <a
-                href="/cv"
-                className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors"
-              >
-                experiences
-              </a>{" "}
-              while also giving me a space to track the things I've learned.
-              This could be through blog posts, project showcases, or something
-              else. My goal is to "try" (heavy emphasis on try) to be consistent
-              with publishing something without needing something to be perfect.
-            </p>
-
-            <p>
-              Hopefully you didn't spend too long reading this...but if you're
-              already here you might as well look around ツ
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center justify-end space-y-6">
-          <div>
-            <Image
-              src="/assets/img/profile-image.jpg"
-              alt="Profile image"
-              className="w-48 h-48 object-cover rounded-sm shadow-lg"
-              width={192}
-              height={192}
-            />
-          </div>
-
-          <div className="flex items-center space-x-4">
+        <div className="social mt-4">
+          <div className="contact-icons flex items-center justify-center space-x-4">
             <a
               href="mailto:dev.aandyw@gmail.com"
               className="text-foreground hover:text-accent-purple transition-colors"
-              aria-label="Email"
+              title="email"
             >
-              <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
+              <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6" />
             </a>
 
             <a
               href="https://scholar.google.ca/citations?user=BuyZ4TkAAAAJ"
               className="text-foreground hover:text-accent-purple transition-colors"
-              aria-label="Google Scholar"
+              title="Google Scholar"
+              rel="external nofollow noopener"
+              target="_blank"
             >
-              <FontAwesomeIcon icon={faGraduationCap} className="w-5 h-5" />
+              <FontAwesomeIcon icon={faGraduationCap} className="w-6 h-6" />
             </a>
 
             <a
               href="https://github.com/aandyw"
               className="text-foreground hover:text-accent-purple transition-colors"
-              aria-label="GitHub"
+              title="GitHub"
+              rel="external nofollow noopener"
+              target="_blank"
             >
-              <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
+              <FontAwesomeIcon icon={faGithub} className="w-6 h-6" />
             </a>
 
             <a
-              href="https://twitter.com/aandyw"
+              href="https://twitter.com/_aandyw"
               className="text-foreground hover:text-accent-purple transition-colors"
-              aria-label="X (Twitter)"
+              title="Twitter"
+              rel="external nofollow noopener"
+              target="_blank"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="w-5 h-5" />
+              <FontAwesomeIcon icon={faXTwitter} className="w-6 h-6" />
             </a>
 
             <a
               href="https://linkedin.com/in/aandyw"
               className="text-foreground hover:text-accent-purple transition-colors"
-              aria-label="LinkedIn"
+              title="LinkedIn"
+              rel="external nofollow noopener"
+              target="_blank"
             >
-              <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />
+              <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="clearfix">
+        <article className="space-y-4 text-foreground leading-6 text-base">
+          <p>
+            Hi there! I'm a final year student studying Mathematics and Computer
+            Science at the{" "}
+            <a
+              href="https://uwaterloo.ca"
+              className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors"
+            >
+              University of Waterloo
+            </a>
+            .
+          </p>
+
+          <p>
+            This portfolio was created to both showcase my ongoing{" "}
+            <Link
+              href="/projects"
+              className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors"
+            >
+              projects
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/cv"
+              className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors"
+            >
+              experiences
+            </Link>{" "}
+            while also giving me a space to track the things I've learned. This
+            could be through blog posts, project showcases, or something else.
+            My goal is to "try" (heavy emphasis on try) to be consistent with
+            publishing something without needing something to be perfect.
+          </p>
+
+          <p>
+            Hopefully you didn't spend too long reading this...but if you're
+            already here you might as well look around ツ
+          </p>
+        </article>
       </div>
     </section>
   );

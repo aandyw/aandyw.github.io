@@ -1,4 +1,4 @@
-import { getAllContent, getContentBySlug, getContentSlugs } from './content';
+import { getAllContent } from './content';
 
 export interface Publication {
   slug: string
@@ -9,7 +9,6 @@ export interface Publication {
   type: string
   url: string
   selected: boolean
-  [key: string]: any
 }
 
 export function getAllPublications(): Publication[] {
@@ -19,12 +18,4 @@ export function getAllPublications(): Publication[] {
 export function getSelectedPublications(): Publication[] {
   const allPubs = getAllPublications()
   return allPubs.filter(pub => pub.selected === true)
-}
-
-export function getPublicationBySlug(slug: string): Publication | null {
-  return getContentBySlug('publications', slug) as Publication | null;
-}
-
-export function getPublicationSlugs(): string[] {
-  return getContentSlugs('publications');
 }

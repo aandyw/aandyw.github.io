@@ -6,12 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Roboto', 'system-ui', 'sans-serif'],
-      },
-      fontWeight: {
-        'normal': '300', // Make "normal" weight be 300 instead of 400
-      },
       colors: {
         'accent-purple': {
           DEFAULT: '#a855f7',

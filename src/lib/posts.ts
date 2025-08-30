@@ -4,14 +4,15 @@ export interface Post {
   slug: string
   title: string
   date: string
-  excerpt?: string
+  description?: string
   content: string
   readingTime: string
-  [key: string]: any
+  tags: string[]
 }
 
 export function getAllPosts(): Post[] {
-  return getAllContent('posts') as any as Post[];
+  const posts = getAllContent('posts') as any as Post[];
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getPostBySlug(slug: string): Post | null {

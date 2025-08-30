@@ -18,24 +18,24 @@ const Navigation = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
-  
+
   const handleThemeToggle = () => {
     setIsAnimating(true);
-    
+
     // Add class to prevent transitions during theme change
-    document.documentElement.classList.add('changing-theme');
-    
+    document.documentElement.classList.add("changing-theme");
+
     setTheme(theme === "light" ? "dark" : "light");
-    
+
     // Remove the no-transition class after a brief delay
     setTimeout(() => {
-      document.documentElement.classList.remove('changing-theme');
+      document.documentElement.classList.remove("changing-theme");
     }, 50);
-    
+
     // Stop icon animation after it completes
     setTimeout(() => setIsAnimating(false), 600);
   };
-  
+
   const navItems = [
     { label: "about", href: "/" },
     { label: "blog", href: "/blog" },
@@ -54,10 +54,10 @@ const Navigation = () => {
               key={item.label}
               variant="ghost"
               className={`${
-                isActive 
-                  ? "text-accent-purple" 
+                isActive
+                  ? "text-accent-purple"
                   : "text-foreground hover:text-accent-purple"
-              } hover:bg-transparent p-0 h-auto font-light transition-colors`}
+              } hover:bg-transparent p-0 h-auto font-light transition-colors text-base`}
               asChild
             >
               <Link href={item.href}>{item.label}</Link>
@@ -68,13 +68,13 @@ const Navigation = () => {
       <Button
         variant="ghost"
         className={`text-muted-foreground hover:text-accent-purple hover:bg-transparent p-0 h-auto transition-all duration-200 cursor-pointer ${
-          isAnimating ? 'animate-theme-icon-spin' : ''
+          isAnimating ? "animate-theme-icon-spin" : ""
         }`}
         aria-label="Toggle theme"
         onClick={handleThemeToggle}
       >
-        <FontAwesomeIcon 
-          icon={!mounted ? faMoon : theme === "light" ? faMoon : faSun} 
+        <FontAwesomeIcon
+          icon={!mounted ? faMoon : theme === "light" ? faMoon : faSun}
           className="w-5 h-5"
         />
       </Button>

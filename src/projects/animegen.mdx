@@ -2,40 +2,15 @@
 title: "AnimeGen"
 description: "An attempt to generate industry-standard facial images for anime characters using Generative Adversarial Networks"
 image: "/assets/img/animegen.png"
-category: "machine learning"
 date: "2024-03-01"
 tags: ["GAN", "Anime", "Image Generation", "PyTorch"]
 url: "https://github.com/aandyw/animegen"
 featured: true
 ---
 
-An attempt to generate industry-standard facial images for anime characters using Generative Adversarial Networks. This project explores the application of GANs to create high-quality anime character faces with consistent style and quality.
+The project can be found on the github repo [AnimeGen](https://github.com/aandyw/AnimeGen)
 
-## Features
-
-- DCGAN (Deep Convolutional GAN) implementation
-- Progressive GAN for high-resolution generation
-- StyleGAN2 adaptation for anime faces
-- Dataset preprocessing and augmentation
-- Training pipeline with monitoring
-
-## Model Architecture
-
-- **Generator**: Deep convolutional network with batch normalization
-- **Discriminator**: Convolutional classifier with spectral normalization
-- **Loss Functions**: Wasserstein loss with gradient penalty
-- **Training**: Progressive growing for resolution scaling
-
-## Dataset
-
-- Curated collection of anime character faces
-- Preprocessed and aligned facial images
-- Data augmentation techniques
-- Quality filtering and validation
-
-## Technologies Used
-
-- PyTorch
-- Python
-- OpenCV for image processing
-- TensorBoard for training visualization
+<ImageGridWithCaption caption="Example generations using the Self-Attention Generative Adversarial Network (SAGAN) implementation.">
+  <img src="/assets/img/animegen.png" alt="demo" className="w-full h-auto rounded-md shadow-sm" />
+  <img src="/assets/img/animegen2.png" alt="demo2" className="w-full h-auto rounded-md shadow-sm" />
+</ImageGridWithCaption>

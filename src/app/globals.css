@@ -1,16 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 @import "tailwindcss";
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css');
 
 @layer base {
   /* Global light font weight */
   * {
+    font-family: 'Roboto', system-ui, sans-serif;
     font-weight: 300;
     /* Smooth transitions for theme changes */
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  }
-  
-  /* Reset and base styles */
-  body {
-    font-family: 'Roboto', system-ui, sans-serif;
   }
   
   /* Disable transitions during theme change to prevent flash */
@@ -25,10 +23,18 @@
     padding-left: 2rem !important;
   }
   
+  ul li::marker {
+    color: hsl(var(--foreground));
+  }
+  
   ol {
     list-style-type: decimal !important;
     list-style-position: outside !important;
     padding-left: 2rem !important;
+  }
+  
+  ol li::marker {
+    color: hsl(var(--foreground));
   }
   
   li {
@@ -63,14 +69,14 @@
     position: relative;
   }
   
-  /* Ensure bullet points are visible */
+  /* Ensure bullet points are visible and theme-aware */
   .prose ul li::marker {
-    color: #212529;
+    color: hsl(var(--foreground));
     font-weight: 400;
   }
   
   .prose ol li::marker {
-    color: #212529;
+    color: hsl(var(--foreground));
     font-weight: 400;
   }
   
@@ -100,7 +106,6 @@
 
 /* Dark mode */
 .dark {
-  /* Inspired by Atom One Dark but refined for your design */
   --background: 220 13% 18%;    /* Dark charcoal #282c34 */
   --foreground: 220 14% 96%;    /* Light gray text #abb2bf */
   --muted-foreground: 220 9% 55%; /* Medium gray #5c6370 */
@@ -140,7 +145,7 @@
 }
 .border-border { 
   border-color: hsl(var(--border)); 
-  transition: border-color 0.3s ease;
+  transition: order-color 0.3s ease;
 }
 .border-border-color { 
   border-color: hsl(var(--border)); 

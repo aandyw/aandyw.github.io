@@ -29,13 +29,7 @@ export function getAllContent(type: string) {
       }
     })
 
-  return allContentData.sort((a: any, b: any) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  return allContentData
 }
 
 export function getContentBySlug(type: string, slug: string) {
