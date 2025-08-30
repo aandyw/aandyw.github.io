@@ -8,6 +8,11 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import { formatReadableDate, renderMarkdownTitle } from "@/lib/utils";
 
+export async function generateStaticParams() {
+  const slugs = getPostSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
+
 const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const post = getPostBySlug(slug);
