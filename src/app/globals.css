@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+body {
+  font-family: 'Roboto', system-ui, sans-serif;
+}
+
+@layer base {
+  /* Global light font weight */
+  * {
+    font-weight: 300;
+    /* Smooth transitions for theme changes */
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Disable transitions during theme change to prevent flash */
+  html.changing-theme * {
+    transition: none !important;
+  }
+
+  /* Force bullet points to be visible - override any conflicting styles */
+  ul {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+  }
+  
+  ul li::marker {
+    color: hsl(var(--foreground));
+  }
+  
+  ol {
+    list-style-type: decimal !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+  }
+  
+  ol li::marker {
+    color: hsl(var(--foreground));
+  }
+  
+  li {
+    display: list-item !important;
+  }
+  
+  /* Override any potential Tailwind or other CSS framework list resets */
+  ul[class], ol[class] {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+  }
+  
+  ol[class] {
+    list-style-type: decimal !important;
+  }
+  
+  /* Ensure list items are properly displayed */
+  li[class] {
+    display: list-item !important;
+  }
+  
+  /* Specific styling for MDX content */
+  .prose ul, .prose ol {
+    margin-bottom: 1.5rem;
+    list-style-position: outside;
+    padding-left: 2rem;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  /* Ensure bullet points are visible and theme-aware */
+  .prose ul li::marker {
+    color: hsl(var(--foreground));
+    font-weight: 400;
+  }
+  
+  .prose ol li::marker {
+    color: hsl(var(--foreground));
+    font-weight: 400;
+  }
+  
+  /* Fallback for browsers that don't support ::marker */
+  .prose ul {
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+  
+  .prose ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+  }
+}
+
+/* Light mode (default) */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 15%;
+  --muted-foreground: 0 0% 45%;
+  --accent-purple: 300 50% 55%;
+  --accent-purple-hover: 300 40% 50%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --border: 0 0% 90%;
+}
+
+/* Dark mode */
+.dark {
+  --background: 220 13% 18%;    /* Dark charcoal #282c34 */
+  --foreground: 220 14% 96%;    /* Light gray text #abb2bf */
+  --muted-foreground: 220 9% 55%; /* Medium gray #5c6370 */
+  
+  /* Enhanced purple accent */
+  --accent-purple: 286 60% 67%;       /* Vibrant purple #c678dd */
+  --accent-purple-hover: 286 65% 72%; /* Brighter purple on hover */
+  
+  --card: 220 13% 21%;          /* Slightly lighter charcoal #21252b */
+  --card-foreground: 220 14% 96%;    /* Light gray text for cards */
+  --border: 220 13% 28%;        /* Border color #3e4451 */
+}
+
+/* Custom classes */
+.bg-background { 
+  background-color: hsl(var(--background)); 
+  transition: background-color 0.3s ease;
+}
+.text-foreground { 
+  color: hsl(var(--foreground)); 
+  transition: color 0.3s ease;
+}
+.text-muted-foreground { 
+  color: hsl(var(--muted-foreground)); 
+  transition: color 0.3s ease;
+}
+.text-accent-purple { 
+  color: hsl(var(--accent-purple)); 
+  transition: color 0.3s ease;
+}
+.hover\:text-accent-purple-hover:hover { 
+  color: hsl(var(--accent-purple-hover)); 
+}
+.bg-card { 
+  background-color: hsl(var(--card)); 
+  transition: background-color 0.3s ease;
+}
+.border-border { 
+  border-color: hsl(var(--border)); 
+  transition: order-color 0.3s ease;
+}
+.border-border-color { 
+  border-color: hsl(var(--border)); 
+  transition: border-color 0.3s ease;
+}
+.text-card-foreground { 
+  color: hsl(var(--card-foreground)); 
+  transition: color 0.3s ease;
+}
+
+/* Additional hover classes */
+.hover\:border-accent-purple:hover {
+  border-color: hsl(var(--accent-purple));
+}
+.hover\:bg-accent-purple:hover {
+  background-color: hsl(var(--accent-purple));
+}
+.hover\:text-white:hover {
+  color: hsl(var(--accent-purple));
+}
+.hover\:text-accent-purple:hover {
+  color: hsl(var(--accent-purple));
+}
+
+/* Theme toggle animations */
+@keyframes theme-icon-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.animate-theme-icon-spin {
+  animation: theme-icon-spin 0.6s ease-in-out;
+}
+
+/* Smooth color transitions for all theme-aware elements */
+body, 
+[class*="text-"], 
+[class*="bg-"], 
+[class*="border-"] {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
