@@ -184,6 +184,41 @@ body {
   animation: theme-icon-spin 0.6s ease-in-out;
 }
 
+/* Mobile dropdown animations */
+@keyframes dropdown-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 300px;
+  }
+}
+
+@keyframes dropdown-slide-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 300px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+}
+
+.mobile-dropdown-enter {
+  animation: dropdown-slide-down 0.2s ease-out;
+}
+
+.mobile-dropdown-exit {
+  animation: dropdown-slide-up 0.2s ease-in;
+}
+
 /* Smooth color transitions for all theme-aware elements */
 body, 
 [class*="text-"], 

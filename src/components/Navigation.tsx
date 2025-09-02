@@ -6,18 +6,49 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSun,
+  faMoon,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   const { theme, setTheme } = useTheme();
   const [isAnimating, setIsAnimating] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   // Prevent hydration mismatch by only rendering after mount
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMobileMenuOpen) {
+        const target = event.target as Element;
+        if (!target.closest(".mobile-menu-container")) {
+          setIsMobileMenuOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   const handleThemeToggle = () => {
     setIsAnimating(true);
@@ -45,40 +76,86 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between w-full max-w-3xl mx-auto px-6 py-6">
-      <div className="flex items-center space-x-8">
-        {navItems.map((item) => {
-          const isActive = pathname === item.href;
-          return (
-            <Button
-              key={item.label}
-              variant="ghost"
-              className={`${
-                isActive
-                  ? "text-accent-purple"
-                  : "text-foreground hover:text-accent-purple"
-              } hover:bg-transparent p-0 h-auto font-light transition-colors text-base`}
-              asChild
-            >
-              <Link href={item.href}>{item.label}</Link>
-            </Button>
-          );
-        })}
-      </div>
-      <Button
-        variant="ghost"
-        className={`text-muted-foreground hover:text-accent-purple hover:bg-transparent p-0 h-auto transition-all duration-200 cursor-pointer ${
-          isAnimating ? "animate-theme-icon-spin" : ""
-        }`}
-        aria-label="Toggle theme"
-        onClick={handleThemeToggle}
-      >
-        <FontAwesomeIcon
-          icon={!mounted ? faMoon : theme === "light" ? faMoon : faSun}
-          className="w-5 h-5"
-        />
-      </Button>
-    </nav>
+    <div className="relative w-full max-w-3xl mx-auto mobile-menu-container">
+      <nav className="flex items-center justify-between w-full px-6 py-6">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Button
+                key={item.label}
+                variant="ghost"
+                className={`${
+                  isActive
+                    ? "text-accent-purple"
+                    : "text-foreground hover:text-accent-purple"
+                } hover:bg-transparent p-0 h-auto font-light transition-colors text-base`}
+                asChild
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </Button>
+            );
+          })}
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <div className="md:hidden">
+          <Button
+            variant="ghost"
+            className="text-foreground hover:text-accent-purple hover:bg-transparent p-2 h-auto transition-colors"
+            aria-label="Toggle mobile menu"
+            onClick={toggleMobileMenu}
+          >
+            <FontAwesomeIcon
+              icon={isMobileMenuOpen ? faTimes : faBars}
+              className="w-6 h-6"
+            />
+          </Button>
+        </div>
+
+        {/* Theme Toggle Button */}
+        <Button
+          variant="ghost"
+          className={`text-muted-foreground hover:text-accent-purple hover:bg-transparent p-0 h-auto transition-all duration-200 cursor-pointer ${
+            isAnimating ? "animate-theme-icon-spin" : ""
+          }`}
+          aria-label="Toggle theme"
+          onClick={handleThemeToggle}
+        >
+          <FontAwesomeIcon
+            icon={!mounted ? faMoon : theme === "light" ? faMoon : faSun}
+            className="w-5 h-5"
+          />
+        </Button>
+      </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 z-50 bg-background border-b border-border shadow-lg mobile-dropdown-enter">
+          <div className="flex flex-col space-y-1 p-4">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Button
+                  key={item.label}
+                  variant="ghost"
+                  className={`${
+                    isActive
+                      ? "text-accent-purple bg-accent-purple/10"
+                      : "text-foreground hover:text-accent-purple hover:bg-accent-purple/5"
+                  } justify-start p-3 h-auto font-light transition-colors text-base rounded-md`}
+                  asChild
+                  onClick={closeMobileMenu}
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </Button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
