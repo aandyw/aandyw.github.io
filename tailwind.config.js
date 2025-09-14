@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+        "iowan-old-style": ["Iowan Old Style BT", "serif"],
       },
       colors: {
         "accent-purple": {

@@ -6,16 +6,14 @@ const Publications = () => {
 
   return (
     <section className="max-w-3xl mx-auto px-6 pt-6 pb-6">
-      <h2 className="text-3xl font-light mb-8 text-foreground">
-        selected publications
+      <h2 className="text-3xl font-light mb-6 text-foreground">
+        Selected Publications
       </h2>
 
       <div className="space-y-8 max-w-2xl">
         {publications.map((pub, index) => (
           <div key={index} className="space-y-1">
-            <h3 className="text-base font-semibold leading-relaxed">
-              {pub.title}
-            </h3>
+            <h3 className="text-base leading-relaxed">{pub.title}</h3>
 
             <p className="text-muted-foreground">
               {pub.authors.map((author, authorIndex) => (
@@ -44,7 +42,7 @@ const Publications = () => {
               variant="outline"
               size="sm"
               asChild
-              className="text-xs px-3 py-1 h-auto border-border-color text-muted-foreground hover:border-accent-purple hover:text-accent-purple transition-all duration-200 rounded-[2px]"
+              className="text-xs px-3 py-1 h-auto border-border-color text-muted-foreground hover:border-accent-purple hover:text-accent-purple transition-all duration-200 rounded-[2px] mt-1"
             >
               <a href={pub.url} target="_blank" rel="noopener noreferrer">
                 {pub.type}

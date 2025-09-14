@@ -24,14 +24,14 @@ The network consists of 8 total layers: 5 convolutional layers and 3 fully conne
 fully connected layer is fed to a 1000-way softmax layer for classification on the original ImageNet dataset. In our
 implementation, the final layer is replaced with a 200-way softmax layer for the **Tiny ImageNet dataset**.
 
-#### A basic summary of layers
+### A basic summary of layers
 
 - **ReLU Non-linearity:** allows for faster training than sigmoid and tanh.
 - **Local Response Normalization (LRN):** normalizes the output of a neuron in a local region to help improve generalization. This normalization is applied after ReLU in specific layers.
 - **Max Pooling:** downsamples the output of the convolutional layers.
 - **Dropout:** helps to prevent overfitting.
 
-#### Training + Optimizer
+### Training + Optimizer
 
 - **Multinomial Logistic Regression Objective (Cross-Entropy Loss)**
 
@@ -51,14 +51,14 @@ Instead we do:
 - Training with ~$30$ epochs and a batch size of $128$.
 - Training on a single GPU (colab T4 GPU is sufficient)
 
-<ImageWithCaption src="/assets/img/blog/alexnet/alexnet.png" alt="AlexNet Architecture" caption="AlexNet Architecture. Image credit to Pinecone." />
+<Image src="/assets/img/blog/alexnet/alexnet.png" alt="AlexNet Architecture" caption="AlexNet Architecture. Image credit to Pinecone." />
 
 ## Results
 
 The final results after training for ~$30$ epochs are as follows:  
 `Test Top-1 accuracy: 31.754350662231445 % | Top-5 accuracy: 58.7618670886076 %`
 
-<ImageWithCaption
+<Image
   src="/assets/img/blog/alexnet/alexnet_metrics.png"
   alt="AlexNet Training Metrics"
 />
@@ -67,19 +67,17 @@ Considering that the paper reports top-1 and top-5 error rate scores of $67.4\%$
 
 _Top-1 and top-5 accuracies are inversely equivalent being $32.6\%$ and $59.1\%$ respectively._
 
-<br/>
-
 ## Some Insights on My Implementation Journey
 
 ---
 
-#### **1. Different PyTorch implementation**
+#### 1. Different PyTorch implementation
 
 Apparently, the implementation of the current PyTorch AlexNet model is different than the original paper. This github issue goes into some detail about it: [pytorch/vision/issues/549](https://github.com/pytorch/vision/issues/549)
 
 Overall, both implementations are similar.
 
-#### **2. Using Top-K metrics to evaluate performance**
+#### 2. Using Top-K metrics to evaluate performance
 
 While accuracy (otherwise referred to as Top-1 accuracy) is a common metric for evaluating the performance of a model,
 it can be misleading in some cases.
@@ -89,11 +87,11 @@ increases and in early stages of training, a simple accuracy metric may be extre
 metric, which measures the percentage of times the correct class exists in the top 5 predictions, is a much more
 forgiving and informative metric.
 
-#### **3. Make sure that data preprocessing is done correctly**
+#### 3. Make sure that data preprocessing is done correctly
 
 Sometimes a simple mistake is all you need to ruin your day.
 
-#### **4. Find a suitable batch size**
+#### 4. Find a suitable batch size
 
 It goes without saying that hyperparameter tuning is a crucial part of training deep learning models. Aside from the
 conventional knowledge of higher batch sizes = higher memory usage, too large a batch size can also cause overfitting.

@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
 
 body {
-  font-family: 'Roboto', system-ui, sans-serif;
+  font-family: "Iowan Old Style BT", Georgia, serif;
 }
 
 @layer base {
@@ -61,6 +60,13 @@ body {
   }
   
   /* Specific styling for MDX content */
+  .prose {
+    font-family: "Iowan Old Style BT", Georgia, serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+  }
+  
   .prose ul, .prose ol {
     margin-bottom: 1.5rem;
     list-style-position: outside;

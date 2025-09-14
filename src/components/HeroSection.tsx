@@ -13,8 +13,8 @@ const HeroSection = () => {
     <section className="max-w-3xl mx-auto px-6 pt-12 pb-6">
       {/* Header Section */}
       <header className="mb-4">
-        <h1 className="text-4xl mb-2 text-foreground">
-          <span className="font-extrabold">Andy</span> Wu
+        <h1 className="text-4xl mb-4 text-foreground">
+          <span className="font-bold">Andy</span> Wu
         </h1>
         <p>Trying to build new things ツ</p>
       </header>
