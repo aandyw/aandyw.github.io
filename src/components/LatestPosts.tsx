@@ -9,12 +9,12 @@ const LatestPosts = () => {
 
   return (
     <section className="max-w-3xl mx-auto px-6 pt-6 pb-6">
-      <h2 className="text-3xl font-light mb-8 text-foreground">latest posts</h2>
+      <h2 className="text-3xl font-light mb-6 text-foreground">Latest Posts</h2>
 
       <div className="space-y-4">
         {posts.map((post, index) => (
           <div key={index} className="flex items-center gap-8">
-            <span className="font-bold min-w-[120px]">
+            <span className="min-w-[120px]">
               {formatReadableDate(post.date)}
             </span>
             <a

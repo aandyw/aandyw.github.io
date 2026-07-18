@@ -20,9 +20,11 @@ const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <article className="max-w-3xl mx-auto px-6 py-6">
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl mb-2">{renderMarkdownTitle(post.title)}</h1>
-        <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
+      <div className="mb-8">
+        <h1 className="text-5xl font-bold mb-2">
+          {renderMarkdownTitle(post.title)}
+        </h1>
+        <div className="flex items-center gap-3 text-sm text-muted-foreground">
           <time dateTime={post.date}>{formatReadableDate(post.date)}</time>
           <span>•</span>
           <span>{post.readingTime}</span>
@@ -30,7 +32,7 @@ const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
         {/* Tags */}
         {post.tags && post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 justify-center mt-4">
+          <div className="flex flex-wrap gap-2 mt-4">
             {post.tags.map((tag: string, tagIndex: number) => (
               <span
                 key={tagIndex}
