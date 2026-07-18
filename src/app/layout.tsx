@@ -1,5 +1,5 @@
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Andy Wu</title>
       </head>
-      <body className="bg-background text-foreground transition-colors duration-300">
+      <body className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -24,7 +24,9 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           <Navigation />
-          <main className="transition-colors duration-300">{children}</main>
+          <main className="flex-1 transition-colors duration-300">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
