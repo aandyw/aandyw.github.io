@@ -19,7 +19,7 @@ const Blog = () => {
   return (
     <main className="max-w-2xl mx-auto px-6 py-12">
       <header className="mb-12 text-center">
-        <h1 className="text-5xl font-light mb-3 text-foreground">Yapanese</h1>
+        <h1 className="text-5xl font-light mb-3 text-foreground">yapanese</h1>
         <p className="text-base text-muted-foreground font-light">
           An imperfect blog on topics of interest
         </p>
