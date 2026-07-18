@@ -23,6 +23,14 @@ const Blog = () => {
         <p className="text-base text-muted-foreground font-light">
           An imperfect blog on topics of interest
         </p>
+        <div
+          className="mx-auto mt-8 flex max-w-xs items-center gap-4"
+          aria-hidden="true"
+        >
+          <span className="flex-1 border-t border-border-color" />
+          <span className="text-xl leading-none text-accent-purple">✣</span>
+          <span className="flex-1 border-t border-border-color" />
+        </div>
       </header>
 
       <div className="mx-auto max-w-xl border-t border-border-color">
