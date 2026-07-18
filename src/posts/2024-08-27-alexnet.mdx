@@ -13,7 +13,7 @@ AlexNet is a landmark convolutional neural network (CNN) architecture proposed b
 and Geoffrey Hinton. The model is famous for its performance in the ImageNet Large Scale Visual Recognition Challenge
 (ILSVRC) in 2012, achieving a significant improvement over the previous state-of-the-art.
 
-Since there exist already a myriad of resources that cover the details of AlexNet, I'd like to simply use this post to
+Since there are already a myriad of resources that cover the details of AlexNet, I'd like to simply use this post to
 summarize my experience with training it on **Tiny ImageNet**.
 
 My implementation can be found [here](https://github.com/aandyw/StuffFromScratch/tree/main/AlexNet).
@@ -41,15 +41,15 @@ $$
 
 - **Stochastic Gradient Descent (SGD) optimizer** with momentum of $0.9$, weight decay of $0.0005$, and learning rate of $0.01$.
 
-Implementations in original paper that we do not use:
+Implementations in the original paper that we do not use:
 
 - Training with $90$ epochs and a batch size of $128$.
 - A key innovation was parallelizing the training across 2 GPUs for 5-6 days which we do not need.
 
-Instead we do:
+Instead, we do:
 
 - Training with ~$30$ epochs and a batch size of $128$.
-- Training on a single GPU (colab T4 GPU is sufficient)
+- Training on a single GPU (Colab T4 GPU is sufficient)
 
 <ImageWithCaption src="/assets/img/blog/alexnet/alexnet.png" alt="AlexNet Architecture" caption="AlexNet Architecture. Image credit to Pinecone." />
 
@@ -65,7 +65,7 @@ The final results after training for ~$30$ epochs are as follows:
 
 Considering that the paper reports top-1 and top-5 error rate scores of $67.4\%$ and $40.9\%$ on ImageNet, we can say that the implementation is sufficiently accurate for the Tiny ImageNet dataset.
 
-_Top-1 and top-5 accuracies are inversely equivalent being $32.6\%$ and $59.1\%$ respectively._
+_Top-1 and top-5 accuracies are the inverse equivalents, at $32.6\%$ and $59.1\%$ respectively._
 
 <br/>
 
@@ -75,7 +75,7 @@ _Top-1 and top-5 accuracies are inversely equivalent being $32.6\%$ and $59.1\%$
 
 #### **1. Different PyTorch implementation**
 
-Apparently, the implementation of the current PyTorch AlexNet model is different than the original paper. This github issue goes into some detail about it: [pytorch/vision/issues/549](https://github.com/pytorch/vision/issues/549)
+Apparently, the implementation of the current PyTorch AlexNet model is different from the original paper. This GitHub issue goes into some detail about it: [pytorch/vision/issues/549](https://github.com/pytorch/vision/issues/549)
 
 Overall, both implementations are similar.
 
