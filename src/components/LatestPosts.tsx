@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { formatReadableDate, renderMarkdownTitle } from "@/lib/utils";
 
@@ -12,17 +13,17 @@ const LatestPosts = () => {
       <h2 className="text-3xl font-light mb-6 text-foreground">Latest Posts</h2>
 
       <div className="space-y-4">
-        {posts.map((post, index) => (
-          <div key={index} className="flex items-center gap-8">
+        {posts.map((post) => (
+          <div key={post.slug} className="flex items-center gap-8">
             <span className="min-w-[120px]">
               {formatReadableDate(post.date)}
             </span>
-            <a
+            <Link
               href={`/blog/${post.slug}`}
               className="text-accent-purple hover:text-accent-purple-hover hover:underline transition-colors font-light"
             >
               {renderMarkdownTitle(post.title)}
-            </a>
+            </Link>
           </div>
         ))}
       </div>

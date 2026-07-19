@@ -1,17 +1,17 @@
 "use client";
 
-import { Button } from "./ui/button";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faSun,
-  faMoon,
   faBars,
+  faMoon,
+  faSun,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   const { theme, setTheme } = useTheme();
@@ -70,7 +70,7 @@ const Navigation = () => {
   const navItems = [
     { label: "about", href: "/" },
     { label: "blog", href: "/blog" },
-    { label: "publications", href: "/publications" },
+    { label: "interests", href: "/interests" },
     { label: "projects", href: "/projects" },
     { label: "cv", href: "/cv" },
   ];

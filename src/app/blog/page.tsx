@@ -17,23 +17,15 @@ const Blog = () => {
   const blogPosts = getAllPosts();
 
   return (
-    <main className="max-w-2xl mx-auto px-6 py-12">
-      <header className="mb-12 text-center">
-        <h1 className="text-5xl font-light mb-3 text-foreground">yapanese</h1>
-        <p className="text-base text-muted-foreground font-light">
+    <main className="max-w-3xl mx-auto px-6 py-12">
+      <header className="mb-16">
+        <h1 className="text-5xl font-light mb-4 text-foreground">yapanese</h1>
+        <p className="text-base text-muted-foreground font-light max-w-2xl">
           An imperfect blog on topics of interest
         </p>
-        <div
-          className="mx-auto mt-8 flex max-w-xs items-center gap-4"
-          aria-hidden="true"
-        >
-          <span className="flex-1 border-t border-border-color" />
-          <span className="text-xl leading-none text-accent-purple">✣</span>
-          <span className="flex-1 border-t border-border-color" />
-        </div>
       </header>
 
-      <div className="mx-auto max-w-xl border-t border-border-color">
+      <div className="border-t border-border-color">
         {blogPosts.map((post) => (
           <BlogPostRow
             key={post.slug}

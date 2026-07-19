@@ -1,16 +1,12 @@
-import {
-  getAllProjects,
-  getProjectBySlug,
-  getProjectSlugs,
-} from "@/lib/projects";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Link from "next/link";
-import { mdxComponents } from "@/components/mdx-components";
-import remarkGfm from "remark-gfm";
-import remarkGemoji from "remark-gemoji";
-import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import remarkGemoji from "remark-gemoji";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import { mdxComponents } from "@/components/mdx-components";
+import { getProjectBySlug, getProjectSlugs } from "@/lib/projects";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -23,7 +19,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) notFound();
 
   return (
-    <article className="max-w-3xl mx-auto px-6a py-8 bg-background">
+    <article className="max-w-3xl mx-auto px-6 py-8 bg-background">
       {/* Back to Projects */}
       <div className="mb-8">
         <Link
@@ -43,9 +39,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Tags */}
         {project.tags && project.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tags.map((tag: string, tagIndex: number) => (
+            {project.tags.map((tag: string) => (
               <span
-                key={tagIndex}
+                key={tag}
                 className="text-xs px-3 py-1 border border-border-color text-muted-foreground bg-transparent rounded-md hover:border-accent-purple hover:text-accent-purple transition-colors duration-200 cursor-pointer"
               >
                 {tag}

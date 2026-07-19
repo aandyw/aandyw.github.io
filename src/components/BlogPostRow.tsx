@@ -33,7 +33,7 @@ const BlogPostRow = ({
         aria-controls={detailsId}
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
-        className="flex w-full cursor-pointer items-center justify-between gap-5 py-4 text-left text-foreground transition-colors hover:text-accent-purple focus-visible:outline-none focus-visible:text-accent-purple"
+        className="flex w-full cursor-pointer items-center justify-between gap-5 py-3 text-left text-foreground transition-colors hover:text-accent-purple focus-visible:outline-none focus-visible:text-accent-purple"
       >
         <span className="min-w-0 text-lg leading-snug">
           {renderMarkdownTitle(title)}
@@ -64,11 +64,11 @@ const BlogPostRow = ({
       >
         <div className="min-h-0 overflow-hidden">
           <div
-            className={`pb-5 pr-10 transition-transform duration-300 ease-out motion-reduce:transition-none ${
+            className={`pb-4 transition-transform duration-300 ease-out motion-reduce:transition-none ${
               isOpen ? "translate-y-0" : "-translate-y-2"
             }`}
           >
-            <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+            <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
               <time dateTime={date} className="sm:hidden">
                 {formatReadableDate(date)}
               </time>
@@ -78,7 +78,7 @@ const BlogPostRow = ({
               <span>{readingTime}</span>
             </div>
 
-            <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+            <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
               {summary}
             </p>
 

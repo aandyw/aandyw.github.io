@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import LatestPosts from "@/components/LatestPosts";
-import Publications from "@/components/SelectedPublications";
 
 const Index = () => {
   return (
@@ -8,7 +7,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <LatestPosts />
-        <Publications />
       </main>
     </div>
   );
