@@ -1,18 +1,6 @@
 import BlogPostRow from "@/components/BlogPostRow";
 import { getAllPosts } from "@/lib/posts";
 
-const getPostSummary = (description: string | undefined, content: string) => {
-  if (description?.trim()) return description;
-
-  const plainText = content
-    .replace(/<[^>]*>/g, " ")
-    .replace(/[#*_`>[\]()-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  return `${plainText.slice(0, 180)}${plainText.length > 180 ? "…" : ""}`;
-};
-
 const Blog = () => {
   const blogPosts = getAllPosts();
 
@@ -30,10 +18,7 @@ const Blog = () => {
           <BlogPostRow
             key={post.slug}
             date={post.date}
-            readingTime={post.readingTime}
             slug={post.slug}
-            summary={getPostSummary(post.description, post.content)}
-            tags={post.tags || []}
             title={post.title}
           />
         ))}

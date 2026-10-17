@@ -85,7 +85,13 @@ const allComponents = {
   ),
   Image: ({ src, alt, caption }: any) => (
     <div className="space-y-3 mb-4 mt-4">
-      <img src={src} alt={alt} className="rounded-sm" />
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="h-auto w-full rounded-sm"
+      />
       {caption && (
         <p className="text-sm text-muted-foreground text-center italic">
           {caption}
